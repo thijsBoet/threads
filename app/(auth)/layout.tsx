@@ -11,7 +11,8 @@ export const metadata: Metadata = {
 const inter = Inter({ subsets: ['latin'] });
 const RootLayout = ({ children }: { children: React.ReactNode }) => {
 	return (
-		<ClerkProvider>
+		<ClerkProvider
+			publishableKey={process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY}>
 			<html lang='en'>
 				<body className={`inter.className bg-dark-1`}>{children}</body>
 			</html>
